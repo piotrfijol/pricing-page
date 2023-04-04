@@ -37,6 +37,11 @@
         min-height: 414px;
         padding: 2rem;
 
+        &__header {
+            display: flex;
+            flex-direction: column;
+        }
+
         &__.title {
             margin: 0 0 1rem 0;
             letter-spacing: -0.03em;
@@ -64,6 +69,12 @@
             font-size: 1rem;
             align-self: flex-end;
             color: var(--color-description);
+        }
+        
+        &__.features-wrapper {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         &__.features ul {
@@ -131,6 +142,56 @@
         .button {
             background-color: var(--color-accent-2);
             color: #FFF;
+        }
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+
+    #pricing-page {
+        .card {
+            min-height: 278px;
+
+            &__header {
+                flex-direction: row;
+            }
+
+            &__.title {
+                flex: 1;
+            }
+
+            &__.features-wrapper {
+                flex-direction: row;
+                flex: 1;
+            }
+
+            &__.button-wrapper {
+                justify-content: flex-end;
+            }
+
+            &__.button {
+                max-width: 260px;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #pricing-page {
+
+        .container {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .container > * {
+            flex: 1;
+        }
+
+        .card {
+            max-width: 324px;
         }
     }
 }
