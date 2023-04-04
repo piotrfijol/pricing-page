@@ -19,10 +19,18 @@
             letter-spacing: -0.01em;
             font-weight: 400;
             line-height: 140%;
+            margin-bottom: 45px;
         }
     }
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     .card {
+        border-radius: 1.5rem;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -50,7 +58,6 @@
             font-weight: 600;
             letter-spacing: -0.03em;
             line-height: 1em;
-            color: var(--color-title);
         }
 
         &__.period {
@@ -103,6 +110,27 @@
             border: none;
             font-size: 0.875rem;
             font-weight: 600;
+        }
+    }
+
+    .card:nth-child(even) {
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+
+        .button {
+            background-color: var(--color-accent-1);
+            color: #FFF;
+        }
+    }
+    
+    .card:nth-child(odd) {
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+        border: 1px solid #E2E8EB;
+
+        .button {
+            background-color: var(--color-accent-2);
+            color: #FFF;
         }
     }
 }
