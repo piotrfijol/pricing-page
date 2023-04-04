@@ -1,2 +1,2 @@
 
-import '../styles/home-page.scss'
+import '../styles/pricing-page.scss'
